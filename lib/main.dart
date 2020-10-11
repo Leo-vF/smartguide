@@ -41,26 +41,11 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
-            //Multimedia
             Center(
               child: Container(
                 margin: EdgeInsets.only(top: 16.0),
                 child: Text(
-                  'MULTIMEDIA',
-                  style: TextStyle(
-                    color: Color(0xffa0c510),
-                    fontSize: 45,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
-            //Guide
-            Center(
-              child: Container(
-                child: Text(
-                  'GUIDE',
+                  'SMARTGUIDE',
                   style: TextStyle(
                     color: Color(0xffa0c510),
                     fontSize: 45,
@@ -149,10 +134,10 @@ class MapStationSelecetion extends StatelessWidget {
                   child: Center(
                     child: Container(
                       child: Text(
-                        'MULTIMEDIA GUIDE',
+                        'SMARTGUIDE',
                         style: TextStyle(
                           color: Color(0xffa0c510),
-                          fontSize: 28,
+                          fontSize: 45,
                           fontFamily: 'Montserrat',
                           fontWeight: FontWeight.bold,
                         ),

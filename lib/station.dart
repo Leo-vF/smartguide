@@ -35,10 +35,10 @@ class Station extends StatelessWidget {
                         child: Center(
                           child: Container(
                             child: Text(
-                              'MULTIMEDIA GUIDE',
+                              'SMARTGUIDE',
                               style: TextStyle(
                                 color: Color(0xffa0c510),
-                                fontSize: 28,
+                                fontSize: 36,
                                 fontFamily: 'Montserrat',
                                 fontWeight: FontWeight.bold,
                               ),
