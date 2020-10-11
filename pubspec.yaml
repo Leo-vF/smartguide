@@ -19,3 +19,13 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Montserrat
+      fonts:
+        - asset: fonts/Montserrat-Light.ttf
+        - asset: fonts/Montserrat-ExtraBold.ttf
+    - family: Raleway
+      fonts:
+        - asset: fonts/Raleway-Light.ttf
