@@ -1,117 +1,263 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_map/plugin_api.dart';
+import 'package:latlong/latlong.dart';
+import 'station.dart';
 
-void main() {
-  runApp(MyApp());
-}
+List<bool> isSelected = [true, false];
+
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      title: 'Holzkirchen Guide',
+      home: HomeScreen(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
+class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
+      backgroundColor: Colors.white,
+      body: SafeArea(
         child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
+            // Willkommen zum
+            Container(
+              margin: EdgeInsets.only(
+                  left: 41.0, right: 32.0, top: 44.0, bottom: 16.0),
+              child: Center(
+                child: Text(
+                  'Willkommen zum',
+                  style: TextStyle(
+                    color: Color(0xffbdbdbd),
+                    fontSize: 24,
+                    fontFamily: 'Raleway',
+                  ),
+                ),
+              ),
             ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
+            //Multimedia
+            Center(
+              child: Container(
+                margin: EdgeInsets.only(top: 16.0),
+                child: Text(
+                  'MULTIMEDIA',
+                  style: TextStyle(
+                    color: Color(0xffa0c510),
+                    fontSize: 45,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            //Guide
+            Center(
+              child: Container(
+                child: Text(
+                  'GUIDE',
+                  style: TextStyle(
+                    color: Color(0xffa0c510),
+                    fontSize: 45,
+                    fontFamily: 'Montserrat',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+            //Holzkirchen
+            Container(
+              child: Center(
+                child: Text(
+                  'HOLZKIRCHEN',
+                  style: TextStyle(
+                    color: Color(0xffa0c510),
+                    fontSize: 36,
+                    fontFamily: 'Montserrat',
+                  ),
+                ),
+              ),
+            ),
+            //leerer platz
+            Expanded(
+              child: Container(),
+            ),
+            //language switcher
+            Container(
+              margin: EdgeInsets.only(left: 50.0),
+              child: LanguageSwitcher(),
+            ),
+            //zum Guide
+            Container(
+              margin: EdgeInsets.only(
+                  left: 34.0, right: 95.0, bottom: 67.64, top: 26.0),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => MapStationSelecetion()),
+                  );
+                },
+                child: Row(
+                  children: <Widget>[
+                    Text(
+                      'zum Guide',
+                      style: TextStyle(
+                        color: Color(0xff828282),
+                        fontSize: 32,
+                        fontFamily: 'Raleway',
+                      ),
+                    ),
+                    Icon(
+                      Icons.arrow_forward,
+                      size: 32,
+                      color: Color(0xff828282),
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+    );
+  }
+}
+
+class MapStationSelecetion extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            //title and back button
+            Center(
+              child: Container(
+                margin: EdgeInsets.only(top: 34.0),
+                child: FlatButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: Center(
+                    child: Container(
+                      child: Text(
+                        'MULTIMEDIA GUIDE',
+                        style: TextStyle(
+                          color: Color(0xffa0c510),
+                          fontSize: 28,
+                          fontFamily: 'Montserrat',
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+            //language switcher
+            Container(
+              margin: EdgeInsets.only(bottom: 17.0),
+              child: Center(
+                child: LanguageSwitcher(),
+              ),
+            ),
+            //Map
+            Expanded(
+              child: Container(
+                child: FlutterMap(
+                  options: new MapOptions(
+                    center: new LatLng(47.877532, 11.701889),
+                    zoom: 17.0,
+                  ),
+                  layers: [
+                    new TileLayerOptions(
+                      urlTemplate:
+                          "https://api.mapbox.com/styles/v1/tobi-b3/ckafdph8o27bg1imt2qfyag92/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidG9iaS1iMyIsImEiOiJja2E4OGYwd3QwMjM2MnFxam92ZDA0NXU3In0.kIr2lwkLv9_UwptepgUtaA",
+                    ),
+                    new MarkerLayerOptions(markers: [
+                      new Marker(
+                        width: 45.0,
+                        height: 45.0,
+                        point: new LatLng(47.877632, 11.701489),
+                        builder: (context) => new Container(
+                          child: IconButton(
+                            icon: Icon(Icons.location_on),
+                            color: Color(0xffa0c510),
+                            iconSize: 45.0,
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (context) => Station()),
+                              );
+                            },
+                          ),
+                        ),
+                      ),
+                    ])
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class LanguageSwitcher extends StatefulWidget {
+  @override
+  _LanguageSwitcherState createState() => _LanguageSwitcherState();
+}
+
+class _LanguageSwitcherState extends State<LanguageSwitcher> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Color(0xfff4f4f4),
+      child: ToggleButtons(
+        color: Color(0xffa0c510),
+        fillColor: Color(0xffa0c510),
+        selectedColor: Colors.white,
+        renderBorder: false,
+        isSelected: isSelected,
+        onPressed: (index) {
+          setState(() {
+            isSelected[index] = !isSelected[index];
+            isSelected[(index + 1) % 2] = !isSelected[(index + 1) % 2];
+          });
+        },
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 23.0),
+            child: Text(
+              'DE',
+              style: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 18,
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 23.0),
+            child: Text(
+              'EN',
+              style: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 18,
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
