@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class LanguageSwitcher extends StatefulWidget {
   @override
@@ -7,7 +8,36 @@ class LanguageSwitcher extends StatefulWidget {
 }
 
 class _LanguageSwitcherState extends State<LanguageSwitcher> {
-  List<bool> isSelected = [true, false];
+  List<bool> isSelected = [false, false];
+
+  @override
+  void initState() {
+    _getBools();
+    super.initState();
+  }
+
+  Future<void> _getBools() async {
+    final prefs = await SharedPreferences.getInstance();
+    final de = prefs.getBool('de');
+    final en = prefs.getBool('en');
+    if (de == null && en == null) {
+      isSelected = [true, false];
+    } else if (de == null && en != null) {
+      isSelected = [!en, en];
+    } else if (de != null && en == null) {
+      isSelected = [de, !de];
+    } else {
+      isSelected = [de, en];
+    }
+    setState(() {});
+  }
+
+  Future<void> _setBools() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool("de", isSelected[0]);
+    await prefs.setBool("en", isSelected[1]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -22,6 +52,8 @@ class _LanguageSwitcherState extends State<LanguageSwitcher> {
           setState(() {
             isSelected[index] = !isSelected[index];
             isSelected[(index + 1) % 2] = !isSelected[(index + 1) % 2];
+            _setBools();
+            print(isSelected);
           });
         },
         children: <Widget>[
