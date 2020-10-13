@@ -53,7 +53,6 @@ class _LanguageSwitcherState extends State<LanguageSwitcher> {
             isSelected[index] = !isSelected[index];
             isSelected[(index + 1) % 2] = !isSelected[(index + 1) % 2];
             _setBools();
-            print(isSelected);
           });
         },
         children: <Widget>[
