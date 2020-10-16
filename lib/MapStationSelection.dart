@@ -71,7 +71,10 @@ class MapStationSelecetion extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                    builder: (context) => Station()),
+                                  builder: (context) => Station(
+                                      "02 ALTES RATHAUS",
+                                      "assets/station02.json"),
+                                ),
                               );
                             },
                           ),

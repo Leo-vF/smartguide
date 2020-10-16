@@ -1,7 +1,33 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart';
 
-class Station extends StatelessWidget {
+class Station extends StatefulWidget {
+  Station(this.name, this.jsonLocation);
+  final String name;
+  final String jsonLocation;
+
+  @override
+  _StationState createState() => _StationState();
+}
+
+class _StationState extends State<Station> {
+  bool language = false;
+
+  @override
+  void initState() {
+    _getBools();
+    super.initState();
+  }
+
+  Future<void> _getBools() async {
+    final prefs = await SharedPreferences.getInstance();
+    final de = prefs.getBool('de');
+    language = de;
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,7 +45,8 @@ class Station extends StatelessWidget {
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 title: Text(
-                  "01 RATHAUS",
+                  widget.name,
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xffa0c510),
                     fontSize: 28,
@@ -58,7 +85,6 @@ class Station extends StatelessWidget {
                           ),
                         ),
                       ),
-                      //Language Switcher (nicht sicher ob das notwendig ist)
                     ],
                   ),
                 ),
@@ -67,29 +93,68 @@ class Station extends StatelessWidget {
           ];
         },
         body: Center(
-          child: ListView(
-            padding: EdgeInsets.symmetric(horizontal: 28.0),
-            children: [
-              Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec diam elit, pharetra a facilisis vel, ornare aliquam tellus. Vivamus molestie vehicula dolor vitae pharetra. Praesent at sollicitudin ex, quis pharetra diam. Fusce a elit mi. Cras efficitur libero ullamcorper ornare mollis. Donec pulvinar dictum ipsum, vitae pharetra turpis suscipit vitae. Curabitur sapien odio, pharetra nec tincidunt ac, consequat vitae risus. \n Sed neque nisl, rutrum quis nibh nec, elementum faucibus nisl. Duis eget est quis libero vestibulum posuere in in arcu. Aliquam erat volutpat. Proin vel enim sapien. Ut tellus lorem, tempor eu congue id, commodo non mi. Mauris pellentesque purus.\n",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 18,
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.w400,
-                ),
-              ),
-              //Image(
-              //  image: NetworkImage(
-              //      "https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg"),
-              //),
-              Image(
-                image: AssetImage("assets/images/AltesRathaus/Bücherei.jpg"),
-              )
-            ],
+          child: FutureBuilder(
+            builder: (context, snapshot) {
+              var jsonData = json.decode(snapshot.data.toString());
+              return ListView.builder(
+                padding: EdgeInsets.symmetric(horizontal: 28.0),
+                physics: BouncingScrollPhysics(),
+                itemBuilder: (BuildContext context, int index) {
+                  if (language == true) {
+                    //
+                    //Falls language true ist, ist die gewählte Sprache Deutsch
+                    //
+                    String lang = "de";
+                    String type = jsonData["content"][lang][index + 1]["type"];
+                    if (type == "img") {
+                      return Image.asset(
+                          jsonData["content"][lang][index + 1]["content"]);
+                    } else if (type == "text") {
+                      return Text(
+                        jsonData["content"][lang][index + 1]["content"],
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Raleway',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      );
+                    }
+                    return Text("Content failed to load");
+                  } else {
+                    //
+                    //Falls language false ist, ist die gewählte Sprache Englisch
+                    //
+                    String lang = "en";
+                    String type = jsonData["content"][lang][index + 1]["type"];
+                    if (type == "img") {
+                      return Image.asset(
+                          jsonData["content"][lang][index + 1]["content"]);
+                    } else if (type == "text") {
+                      return Text(
+                        jsonData["content"][lang][index + 1]["content"],
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 18,
+                          fontFamily: 'Raleway',
+                          fontWeight: FontWeight.w400,
+                        ),
+                      );
+                    }
+                    return Text("Content failed to load");
+                  }
+                },
+                itemCount: jsonData["content"]["en"].length - 1,
+              );
+            },
+            future:
+                DefaultAssetBundle.of(context).loadString(widget.jsonLocation),
           ),
         ),
       ),
+      //bottomNavigationBar: , takes Widget; planned to put the audio player here
     );
   }
 }
