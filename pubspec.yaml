@@ -31,6 +31,7 @@ flutter_icons:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/AltesRathaus/
     - assets/
   fonts:
     - family: Montserrat
