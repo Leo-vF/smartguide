@@ -4,8 +4,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class Station extends StatefulWidget {
-  Station(this.name, this.jsonLocation);
-  final String name;
+  Station(this.jsonLocation);
   final String jsonLocation;
 
   @override
@@ -14,17 +13,31 @@ class Station extends StatefulWidget {
 
 class _StationState extends State<Station> {
   bool language = false;
+  String name = "";
+  String audioLocation = "";
 
   @override
   void initState() {
-    _getBools();
+    _getData();
     super.initState();
   }
 
-  Future<void> _getBools() async {
+  Future<void> _getData() async {
     final prefs = await SharedPreferences.getInstance();
     final de = prefs.getBool('de');
     language = de;
+
+    var jsonString =
+        await DefaultAssetBundle.of(context).loadString(widget.jsonLocation);
+    var jsonData = json.decode(jsonString);
+    if (language == true) {
+      name = jsonData["content"]["de"][0]["name"];
+    } else {
+      name = jsonData["content"]["en"][0]["name"];
+    }
+
+    audioLocation = jsonData["audio"];
+
     setState(() {});
   }
 
@@ -45,7 +58,7 @@ class _StationState extends State<Station> {
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
                 title: Text(
-                  widget.name,
+                  name,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color(0xffa0c510),
