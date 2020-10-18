@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'audioBar.dart';
 
 class Station extends StatefulWidget {
   Station(this.jsonLocation);
@@ -15,9 +16,13 @@ class _StationState extends State<Station> {
   bool language = false;
   String name = "";
   String audioLocation = "";
+  var jsonData;
 
   @override
   void initState() {
+    print("---------------------------------------------");
+    print(widget.jsonLocation);
+    print("---------------------------------------------");
     _getData();
     super.initState();
   }
@@ -29,15 +34,16 @@ class _StationState extends State<Station> {
 
     var jsonString =
         await DefaultAssetBundle.of(context).loadString(widget.jsonLocation);
-    var jsonData = json.decode(jsonString);
+    jsonData = json.decode(jsonString);
+    audioLocation = jsonData["audio"];
     if (language == true) {
       name = jsonData["content"]["de"][0]["name"];
     } else {
       name = jsonData["content"]["en"][0]["name"];
     }
 
-    audioLocation = jsonData["audio"];
-
+    //audioLocation = jsonData["audio"];
+    print(audioLocation);
     setState(() {});
   }
 
@@ -167,7 +173,8 @@ class _StationState extends State<Station> {
           ),
         ),
       ),
-      //bottomNavigationBar: , takes Widget; planned to put the audio player here
+      bottomNavigationBar: AudioBar(
+          "assets/audios/Altes-Rathaus.mp3"), //takes Widget; planned to put the audio player here
     );
   }
 }
