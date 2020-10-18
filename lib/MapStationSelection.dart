@@ -6,6 +6,8 @@ import 'station.dart';
 import 'LanguageSwitcher.dart';
 
 class MapStationSelecetion extends StatelessWidget {
+  final String _jsonLocation = "assets/station02.json";
+  final String _audioLocation = "assets/audios/Altes-Rathaus.mp3";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,8 +73,8 @@ class MapStationSelecetion extends StatelessWidget {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                  builder: (context) =>
-                                      Station("assets/station02.json"),
+                                  builder: (context) => Station(_jsonLocation,
+                                      _audioLocation), //"assets/station02.json"
                                 ),
                               );
                             },

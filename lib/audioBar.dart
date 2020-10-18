@@ -107,7 +107,6 @@ class _AudioBarState extends State<AudioBar>
                 max: _duration.inSeconds.toDouble() ?? 1,
                 value: _position.inSeconds.toDouble() ?? 0,
                 onChanged: (double value) {
-                  print(widget.localFilePath);
                   setState(() {
                     _seek(value.toInt());
                     value = value;

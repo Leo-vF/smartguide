@@ -5,8 +5,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'audioBar.dart';
 
 class Station extends StatefulWidget {
-  Station(this.jsonLocation);
+  Station(this.jsonLocation, this.audioLocation);
   final String jsonLocation;
+  final String audioLocation;
 
   @override
   _StationState createState() => _StationState();
@@ -20,9 +21,6 @@ class _StationState extends State<Station> {
 
   @override
   void initState() {
-    print("---------------------------------------------");
-    print(widget.jsonLocation);
-    print("---------------------------------------------");
     _getData();
     super.initState();
   }
@@ -42,8 +40,6 @@ class _StationState extends State<Station> {
       name = jsonData["content"]["en"][0]["name"];
     }
 
-    //audioLocation = jsonData["audio"];
-    print(audioLocation);
     setState(() {});
   }
 
@@ -115,6 +111,7 @@ class _StationState extends State<Station> {
           child: FutureBuilder(
             builder: (context, snapshot) {
               var jsonData = json.decode(snapshot.data.toString());
+              //_getData();
               return ListView.builder(
                 padding: EdgeInsets.symmetric(horizontal: 28.0),
                 physics: BouncingScrollPhysics(),
@@ -173,8 +170,7 @@ class _StationState extends State<Station> {
           ),
         ),
       ),
-      bottomNavigationBar: AudioBar(
-          "assets/audios/Altes-Rathaus.mp3"), //takes Widget; planned to put the audio player here
+      bottomNavigationBar: AudioBar(widget.audioLocation),
     );
   }
 }
