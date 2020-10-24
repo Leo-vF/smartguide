@@ -8,7 +8,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Holzkirchen Guide',
+      debugShowCheckedModeBanner: false,
+      title: 'Smartguide Holzkirchen',
       home: HomeScreen(),
     );
   }
