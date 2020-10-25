@@ -38,6 +38,7 @@ flutter:
     - assets/images/Bahnhof/
     - assets/images/Herdergarten/
     - assets/images/Pestkapelle/
+    - assets/images/Marktplatz/
     - assets/audios/
     - assets/
   fonts:
