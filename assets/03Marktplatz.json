@@ -1,0 +1,129 @@
+﻿{
+  "latitiude": 47.877202,
+  "longitude": 11.701718,
+  "audio": "assets/audios/Marktplatz.mp3",
+  "content": {
+    "en": [
+      {
+        "name": "03 MARKETPLACE"
+      },
+      {
+        "type": "text",
+        "content": "The farmers market takes place in front of the city hall in center of Holzkirchen. The marketplace is the heart of this town. Farm owner and marketeer from Holzkirchen and surroundings assemble their booths twice a week, on Wednesday and Saturday."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic1.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "The variety of offerings is huge. On one hand there are market stands with fruits and vegetables and on the other hand there are some with cheese, meat and fish. Usually there are some special stands, too. For example, unique features like wine and bacon from Süd Tirol. The food is ecological, organic and quality is outstanding."
+      },
+      {
+        "type": "text",
+        "content": "Many citizens of Holzkirchen enjoy buying their weekly groceries on the farmers market. The shopping is not as stressful when they go there compared to a supermarket. They do not have to rush through everything, because on the market is always time for a little chat with the marketeer or other customers. In addition, marketeer can easily answer their questions on products. The famers market gives the opportunity to buy things eco-friendly, which people in Holzkirchen appreciate a lot."
+      },
+      {
+        "type": "text",
+        "content": "Additionally, there are some special market days which depend on the time of the year. Around Christmas, there is a Christmas market with different booths, for example some with mulled wine and children’s punch. Of course, the marketplace is decorated nicely with fair lights for these occasions. There are also some Bavarian traditional markets like the Johannimarket, Simon-Judi-Market and the Grasmarket."
+      },
+      {
+        "type": "text",
+        "content": "The famers market is an important part of Holzkirchen. Not only twice a week on the marketplace, it is also in the towns name because Holzkirchen is a market community."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic3.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic4.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic5.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic6.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic7.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic8.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic9.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic10.jpg"
+      }
+    ],
+    "de": [
+      {
+        "name": "03 MARKT"
+      },
+      {
+        "type": "text",
+        "content": "Der im Zentrum liegende Marktplatz wird wöchentlich zweimal mit Leben gefüllt, denn mittwochs und samstags findet hier der beliebte Markt statt. Das Angebot geht von Gemüse über Obst bis hin zu typischen Feinkosten des Oberlandes. Der Markt wandelt sich mit der Jahreszeit, beispielsweise gibt es im Winter einen „Winterzauber“ und bietet so ein besonderes Ambiente."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic1.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic2.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic3.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic4.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic5.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic6.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic7.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic8.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic9.jpg"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Marktplatz/pic10.jpg"
+      },
+      {
+        "type": "text",
+        "content": ""
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltesRathaus/Bücherei.jpg"
+      }
+    ]
+  }
+}

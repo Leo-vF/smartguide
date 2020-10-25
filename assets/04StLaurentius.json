@@ -1,0 +1,45 @@
+﻿{
+  "latitiude": 47.876913,
+  "longitude": 11.701777,
+  "audio": "assets/audios/StLaurentius.m4a",
+  "content": {
+    "en": [
+      {
+        "name": "04 ST. LAURENTIUS"
+      },
+      {
+        "type": "text",
+        "content": "The catholic church St Laurentius was built for the first time in the 7th or 8th century in conjunction to the establishment of the monastery Tegernsee. At this time, it was actually a church in the woods, as Holzkirchen was nothing more than a forest and some dirt tracks. Therefore, when a town was founded in the 12th century around the church, it was called Holzkirchen, which literally translates to wood-church."
+      },
+      {
+        "type": "text",
+        "content": "Already on the first coat of arms of Holzkirchen in 1550 St Laurentius was represented and still is in the current one, hence it became one the towns landmarks."
+      },
+      {
+        "type": "text",
+        "content": "The church is named after the patron Saint Laurentius, a roman deacon and martyr, who died on the 10th of August in 258 AC."
+      },
+      {
+        "type": "text",
+        "content": "Between 1490 and 1802 the church burnt down seven times, either partially or completely, however she was always time-adapting reconstructed by the cloister. After the monastery was broken up in 1803, Holzkirchen was given to the reigning Elector of Bavaria. Through this new alliance, new laws were administered for example compulsory education."
+      },
+      {
+        "type": "text",
+        "content": "Today weekday services, Saturday night-Mass and funerals are frequently held in St Laurentius, as well as special events such as annual concerts of local choirs like the Holzkirchner Liedertafel and Cantica Nova."
+      },
+      {
+        "type": "text",
+        "content": "To sum it up St Laurentius is as a meeting place for people of any age or religion in Holzkirchen of substantial importance."
+      }
+    ],
+    "de": [
+      {
+        "name": "04 ST: LAURENTIUS"
+      },
+      {
+        "type": "text",
+        "content": "Die katholische St. Laurentius Kirche ist im Herzen von Holzkirchen und das Gebäude nach welchem der Ort benannt wurde."
+      }
+    ]
+  }
+}

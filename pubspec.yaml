@@ -34,7 +34,11 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/AltesRathaus/
-    - assets/audios/Altes-Rathaus.mp3
+    - assets/images/AltePost/
+    - assets/images/Bahnhof/
+    - assets/images/Herdergarten/
+    - assets/images/Pestkapelle/
+    - assets/audios/
     - assets/
   fonts:
     - family: Montserrat

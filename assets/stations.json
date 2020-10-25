@@ -1,3 +1,11 @@
 [
-    "assets/station02.json"
+    "assets/01Herdergarten.json",
+    "assets/02AltesRathaus.json",
+    "assets/03Marktplatz.json",
+    "assets/04StLaurentius.json",
+    "assets/05AltePost.json",
+    "assets/06Oberbräu.json",
+    "assets/07Pestkapelle.json",
+    "assets/08Bahnhof.json",
+    "assets/09Teufelsgraben.json"
 ]

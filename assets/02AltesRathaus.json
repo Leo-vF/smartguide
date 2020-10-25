@@ -1,0 +1,49 @@
+{
+  "latitiude": 47.877632,
+  "longitude": 11.701489,
+  "audio": "assets/audios/Altes-Rathaus.mp3",
+  "content": {
+    "en": [
+      {
+        "name": "02 OLD TOWNHALL"
+      },
+      {
+        "type": "text",
+        "content": "The building in front of you hasn’t always been the towns library, in fact the history this building has is very interesting and goes back to when the town was still under the Tegernseer monastery’s control. Back then, a couple centuries back, it was used as the “Zehentstadel”. It was the place where Holzkirchens payments to the monastery where collected. After that in 1827 the building was bought from the monastery to become the new Town Hall. During all this time fires were a common threat in Holzkirchen and eventually in 1842 the building burned down. Afterwards it was rebuilt bigger than it had previously had been. Along with Holzkirchens growth the town hall had to grow as well and so in 1896 the boardroom was enlarged. In 1913 a new chandelier was put into the community hall. The picture below shows the marketplace from 1920."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltesRathaus/marktplatz1920.jpg"
+      },
+      {
+        "type": "text",
+        "content": "In 1935 the building was the further altered which was heavily publicized in the press. Sometime later the town hall then moved out into a now building directly across from the old one. Then there was the idea to use it as the town’s library, the plan was set in action and it is still the purpose the building serves today. Nowadays it has got other things to lend other than books as well, for example Movies, Magazines and board games. It is usually opened on afternoons during the week."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltesRathaus/Bücherei.jpg"
+      }
+    ],
+    "de": [
+      {
+        "name": "01 ALTES RATHAUS"
+      },
+      {
+        "type": "text",
+        "content": "Das Haus vor ihnen war nicht immer die Gemeindebücherei, genau genommen ist das vergleichsweise neu. Das besondere and diesem Haus mit dem komischen Dach ist die Geschichte die es bereits miterlebt hat. Frühere, vor mehreren hundert Jahren wurde es als Zehentstadel genutzt. Es war das Haus in dem die Abgaben Holzkirchens an das Kloster Tegernsee gesammelt wurden. 1827 wurde das Gebäude schließlich dem Kloster abgekauft und zum damals neuen Rathauses Holzkirchens umgebaut. Holzkirchen wurde häufig von Feuern heimgesucht und so auch dieses Haus. 1842 zerstörte ein Feuer das Haus, es wurde danach etwas größer als es zuvor war wiederaufgebaut. So wie Holzkirchen immer weiter wuchs musste auch das Rathaus wachsen und so wurde zuerst 1896 der Sitzungssaal erweitert und 1913 wird ein neuer Lüster im Gemeindesaal eingebaut. Das Bild zeigt den Marktplatz um 1920."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltesRathaus/marktplatz1920.jpg"
+      },
+      {
+        "type": "text",
+        "content": "1935 wird das Gebäude dann weiter umgebaut allerdings wird dies auch groß in der Presse Publiziert. Später ist das Rathaus dann schließlich umgezogen und zwar in das neue Rathaus, direkt gegenüber. Man kam dann zu dem Schluss das Gebäude zur Gemeindebücherei Holzkirchens zu machen, diesen Zweck erfüllt es noch heute. Mittlerweile ist es allerdings mehr als eine Bücherei und hat auch Filme Zeitschriften und Spiele zum Ausleihen. Geöffnet ist unter der Woche meist nachmittags."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltesRathaus/Bücherei.jpg"
+      }
+    ]
+  }
+}

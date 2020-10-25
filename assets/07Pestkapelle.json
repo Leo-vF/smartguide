@@ -1,0 +1,61 @@
+﻿{
+  "latitiude": 47.878708,
+  "longitude": 11.699990,
+  "audio": "assets/audios/Pestkapelle.mp3",
+  "content": {
+    "en": [
+      {
+        "name": "07 PESTKAPELLE"
+      },
+      {
+        "type": "text",
+        "content": "Chapel Our dear ladies"
+      },
+      {
+        "type": "text",
+        "content": "Todays cemetery chapel, consisting of a small saddleback roof with ridge turret, was built in 1639 as so called plague chapel. In 1807 the graveyard from the St.Laurentius church has been relocated to the chapel and consequently a wall was built around the graveyard and the small chapel."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Pestkapelle/pic1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Our dear lady refers to the virgin Mary, mother of god which plays a big role in the catholic church. Inside of the plague chapel you can see this small altar: "
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Pestkapelle/pic2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "To get more specific information and some interesting stories, you should listen to the german interview I conducted with pastor Gottfried Doll."
+      },
+      {
+        "type": "text",
+        "content": ""
+      },
+      {
+        "type": "text",
+        "content": "Bildquelle: Der Kirchenführer. Die Kirchen der Pfarrei Holzkirchen (S.31)"
+      }
+    ],
+    "de": [
+      {
+        "name": "07 PESTKAPELLE"
+      },
+      {
+        "type": "text",
+        "content": "Eine alte kleine Kapelle, die zum Andenken an die zahlreichen Pestopfer der schlimmen Pestepidemien erbaut wurde? Und das mitten in Holzkirchen!?"
+      },
+      {
+        "type": "text",
+        "content": "Noch nie davon gehört? Dann seid Ihr hier genau richtig."
+      },
+      {
+        "type": "text",
+        "content": "Ich nehme euch gemeinsam mit Pfarrer Gottfried Doll auf eine geschichtliche Erkundung."
+      }
+    ]
+  }
+}

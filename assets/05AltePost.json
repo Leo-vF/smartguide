@@ -1,0 +1,69 @@
+﻿{
+  "latitiude": 47.876370,
+  "longitude": 11.701771,
+  "audio": "assets/audios/AltePost.mp3",
+  "content": {
+    "en": [
+      {
+        "name": "05 OLD POST STATION"
+      },
+      {
+        "type": "text",
+        "content": "Back in 1674 the hotel opened for the first time ever. Since then almost everything changed. When Baltasar Mayr first opened the Hotel it was called the Bauernbräu."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltePost/pic1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Hotel 1751: https://www.alte-post-holzkirchen.de/alte-post/historie-tradition.html (accessed 29.09.2020)"
+      },
+      {
+        "type": "text",
+        "content": "1827 Johann Holfeld the Hotel was renamed from Bauernbräu to Postbräu. 1893 a new post office was created at the inner market. As a result of this the „Brauwirt“ became the „Neue Post“ and the „Postbräu“ became the „Alte Post“. In 1982 the whole Hotel was renovated. Since 1997 Gabriele Falke and her Husband Udo are taking care of the 43 rooms and the guests from all around the world."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltePost/pic2.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Sleeping-room: https://www.alte-post-holzkirchen.de/hotel/bilder/zimmer.html (accessed 29.09.2020)"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltePost/pic3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Historical menu: https://www.alte-post-holzkirchen.de/alte-post/historie-tradition.html (accessed 29.09.2020)"
+      }
+    ],
+    "de": [
+      {
+        "name": "05 ALTE POST"
+      },
+      {
+        "type": "text",
+        "content": "1674 wurde der Gasthof erstmals eröffnet. Seitdem hat sich sehr viel verändert. Um mehr über den Gasthof Alte Post zu erfahren hören Sie sich die Audiodatei an."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltePost/pic1.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Schlafzimmer: https://www.alte-post-holzkirchen.de/hotel/bilder/zimmer.html (Zugriff am 29.09.2020)"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/AltePost/pic3.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Alte Speisekarte: https://www.alte-post-holzkirchen.de/alte-post/historie-tradition.html (Zugriff am 29.09.2020)"
+      }
+    ]
+  }
+}
