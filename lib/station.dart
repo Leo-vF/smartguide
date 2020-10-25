@@ -18,6 +18,7 @@ class _StationState extends State<Station> {
   String name = "";
   String audioLocation = "";
   var jsonData;
+  String lang = "";
 
   @override
   void initState() {
@@ -36,8 +37,10 @@ class _StationState extends State<Station> {
     audioLocation = jsonData["audio"];
     if (language == true) {
       name = jsonData["content"]["de"][0]["name"];
+      lang = "de";
     } else {
       name = jsonData["content"]["en"][0]["name"];
+      lang = "en";
     }
 
     setState(() {});
@@ -162,7 +165,7 @@ class _StationState extends State<Station> {
                     return Text("Content failed to load");
                   }
                 },
-                itemCount: jsonData["content"]["en"].length - 1,
+                itemCount: jsonData["content"][lang].length - 1,
               );
             },
             future:
