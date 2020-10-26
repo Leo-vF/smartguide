@@ -17,6 +17,7 @@ dependencies:
   shared_preferences: ^0.5.12
   audioplayers: ^0.16.1
   path_provider: ^1.6.21
+  auto_size_text: ^2.1.0
 
 dev_dependencies:
   flutter_launcher_icons:

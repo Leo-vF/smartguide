@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'audioBar.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class Station extends StatefulWidget {
   Station(this.jsonLocation, this.audioLocation);
@@ -62,12 +63,14 @@ class _StationState extends State<Station> {
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 centerTitle: true,
-                title: Text(
+                title: AutoSizeText(
                   name,
+                  maxFontSize: 28,
+                  maxLines: 1,
                   textAlign: TextAlign.center,
                   style: TextStyle(
+                    fontSize: 28.0,
                     color: Color(0xffa0c510),
-                    fontSize: 28,
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.bold,
                   ),
