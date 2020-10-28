@@ -33,6 +33,12 @@ class _AudioBarState extends State<AudioBar>
   }
 
   @override
+  void dispose() {
+    _audioPlayer.pause();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     _controller = AnimationController(
       duration: Duration(milliseconds: 250),
@@ -44,24 +50,24 @@ class _AudioBarState extends State<AudioBar>
   }
 
   Future _loadSound() async {
-    //print("---------------------------------------------");
-    //print(widget.localFilePath);
-    //print("---------------------------------------------");
     final ByteData data = await rootBundle.load(widget.localFilePath);
     Directory tempDir = await getTemporaryDirectory();
     File tempFile = File("${tempDir.path}/Altes-Rathaus.mp3");
     await tempFile.writeAsBytes(data.buffer.asInt8List(), flush: true);
     localFileUri = tempFile.path;
-    //setState(() {});
   }
 
   void _makePlayer() {
     _loadSound().then((value) => _loadFile());
     _audioPlayer.onDurationChanged.listen((Duration d) {
-      setState(() => _duration = d);
+      if (this.mounted) {
+        setState(() => _duration = d);
+      }
     });
     _audioPlayer.onAudioPositionChanged.listen((Duration p) {
-      setState(() => _position = p);
+      if (this.mounted) {
+        setState(() => _position = p);
+      }
     });
   }
 
@@ -79,18 +85,18 @@ class _AudioBarState extends State<AudioBar>
             ),
             color: Color(0xffa0c510),
             onPressed: () {
-              //final myPlayer = AudioCache();
-              //myPlayer.play("Altes-Rathaus.mp3");
-              setState(() {
-                isPlaying = !isPlaying;
-                if (isPlaying == true) {
-                  _controller.forward();
-                  _audioPlayer.resume();
-                } else {
-                  _controller.reverse();
-                  _audioPlayer.pause();
-                }
-              });
+              if (this.mounted) {
+                setState(() {
+                  isPlaying = !isPlaying;
+                  if (isPlaying == true) {
+                    _controller.forward();
+                    _audioPlayer.resume();
+                  } else {
+                    _controller.reverse();
+                    _audioPlayer.pause();
+                  }
+                });
+              }
             },
             iconSize: 40.0,
           ),
@@ -104,13 +110,15 @@ class _AudioBarState extends State<AudioBar>
               ),
               child: Slider(
                 min: 0.0,
-                max: _duration.inSeconds.toDouble() ?? 1,
-                value: _position.inSeconds.toDouble() ?? 0,
+                max: _duration.inSeconds.toDouble(),
+                value: _position.inSeconds.toDouble(),
                 onChanged: (double value) {
-                  setState(() {
-                    _seek(value.toInt());
-                    value = value;
-                  });
+                  if (this.mounted) {
+                    setState(() {
+                      _seek(value.toInt());
+                      value = value;
+                    });
+                  }
                 },
               ),
             ),
