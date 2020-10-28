@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartguide/aboutPage.dart';
 import 'MapStationSelection.dart';
 import 'LanguageSwitcher.dart';
 
@@ -78,7 +79,7 @@ class HomeScreen extends StatelessWidget {
             //zum Guide
             Container(
               margin: EdgeInsets.only(
-                  left: 34.0, right: 95.0, bottom: 67.64, top: 26.0),
+                  left: 34.0, right: 95.0, bottom: 60.0, top: 26.0),
               child: FlatButton(
                 onPressed: () {
                   Navigator.of(context).push(
@@ -105,6 +106,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
             ),
+            AboutPage(),
           ],
         ),
       ),
