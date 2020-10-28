@@ -16,7 +16,17 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,24 +35,9 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            // Willkommen zum
-            Container(
-              margin: EdgeInsets.only(
-                  left: 41.0, right: 32.0, top: 44.0, bottom: 16.0),
-              child: Center(
-                child: Text(
-                  'Willkommen zum',
-                  style: TextStyle(
-                    color: Color(0xffbdbdbd),
-                    fontSize: 24,
-                    fontFamily: 'Raleway',
-                  ),
-                ),
-              ),
-            ),
             Center(
               child: Container(
-                margin: EdgeInsets.only(top: 16.0),
+                margin: EdgeInsets.only(top: 60.0),
                 child: Text(
                   'SMARTGUIDE',
                   style: TextStyle(
@@ -90,7 +85,7 @@ class HomeScreen extends StatelessWidget {
                 child: Row(
                   children: <Widget>[
                     Text(
-                      'zum Guide',
+                      'Start Guide',
                       style: TextStyle(
                         color: Color(0xff828282),
                         fontSize: 32,

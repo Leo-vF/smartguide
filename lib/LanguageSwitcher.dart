@@ -11,6 +11,11 @@ class _LanguageSwitcherState extends State<LanguageSwitcher> {
   List<bool> isSelected = [false, false];
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+
+  @override
   void initState() {
     _getBools();
     super.initState();
