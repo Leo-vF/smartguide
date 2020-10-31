@@ -68,7 +68,7 @@ class _MapWidgetState extends State<MapWidget> {
         layers: [
           new TileLayerOptions(
             urlTemplate:
-                "https://api.mapbox.com/styles/v1/tobi-b3/ckafdph8o27bg1imt2qfyag92/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoidG9iaS1iMyIsImEiOiJja2E4OGYwd3QwMjM2MnFxam92ZDA0NXU3In0.kIr2lwkLv9_UwptepgUtaA",
+                "https://api.mapbox.com/styles/v1/tobi-b3/ckafdph8o27bg1imt2qfyag92/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1Ijoic21hcnRndWlkZS1ob2x6a2lyY2hlbiIsImEiOiJja2d4cmdlY2kwYXZ1MnlwY2Vvcmt4cmtnIn0.BBQJ9sqBvgDnhbFbBd1YTQ",
           ),
           new MarkerLayerOptions(markers: setMarkers())
         ],
