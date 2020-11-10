@@ -64,7 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             //leerer platz
             Expanded(
-              child: Container(),
+              child: Center(
+                child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.0),
+                    child: Image.asset('assets/images/general/start_page.jpg')),
+              ),
             ),
             //language switcher
             Container(
