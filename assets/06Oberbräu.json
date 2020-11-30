@@ -20,8 +20,24 @@
         "content": "With more than 230 events in the Festsaal and FoolsTheater as well as over 800 film screenings in the FoolsKino every year, the cultural center of the market town of Holzkirchen has already counted more than 500,000 visitors."
       },
       {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu1.png"
+      },
+      {
         "type": "text",
-        "content": ""
+        "content": "Picture: Manfred Lehner"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu2.png"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu3.png"
+      },
+      {
+        "type": "text",
+        "content": "Picture: Manfred Lehner"
       },
       {
         "type": "text",
@@ -47,6 +63,34 @@
       {
         "type": "text",
         "content": "Bei jährlich über 230 Veranstaltungen im Festsaal und FoolsTheater sowie über 800 Filmvorführungen im FoolsKino zählte das Kulturhaus der Marktgemeinde Holzkirchen bereits über 500.000 Besucher."
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu1.png"
+      },
+      {
+        "type": "text",
+        "content": "Foto: Manfred Lehner"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu2.png"
+      },
+      {
+        "type": "img",
+        "content": "assets/images/Oberbraeu/oberbraeu3.png"
+      },
+      {
+        "type": "text",
+        "content": "Foto: Manfred Lehner"
+      },
+      {
+        "type": "text",
+        "content": "Quelle:"
+      },
+      {
+        "type": "text",
+        "content": "https://www.kultur-im-oberbraeu.de"
       }
     ]
   }
