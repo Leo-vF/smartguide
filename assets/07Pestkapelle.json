@@ -5,15 +5,15 @@
   "content": {
     "en": [
       {
-        "name": "07 PESTKAPELLE"
+        "name": "07 PLAGUE CHAPEL"
       },
       {
         "type": "text",
-        "content": "Chapel Our dear ladies"
+        "content": "Chapel "Our Dear Ladies""
       },
       {
         "type": "text",
-        "content": "Todays cemetery chapel, consisting of a small saddleback roof with ridge turret, was built in 1639 as so called plague chapel. In 1807 the graveyard from the St.Laurentius church has been relocated to the chapel and consequently a wall was built around the graveyard and the small chapel."
+        "content": "Today's cemetery chapel, consisting of a small saddleback roof with ridge turret, was built in 1639 as a so called plague chapel. In 1807 the graveyard of St.Laurentius church was relocated to the chapel and consequently a wall was built around the graveyard and the small chapel."
       },
       {
         "type": "img",
@@ -21,7 +21,7 @@
       },
       {
         "type": "text",
-        "content": "Our dear lady refers to the virgin Mary, mother of god which plays a big role in the catholic church. Inside of the plague chapel you can see this small altar: "
+        "content": ""Our Dear Lady" refers to the virgin Mary, mother of God who is very venerated in the Catholic Church. Inside the plague chapel, you can see this small altar: "
       },
       {
         "type": "img",
@@ -29,7 +29,7 @@
       },
       {
         "type": "text",
-        "content": "To get more specific information and some interesting stories, you should listen to the german interview I conducted with pastor Gottfried Doll."
+        "content": "To get more specific information and some interesting stories, you should listen to the German interview I conducted with Pastor Gottfried Doll."
       },
       {
         "type": "text",
@@ -37,7 +37,7 @@
       },
       {
         "type": "text",
-        "content": "Bildquelle: Der Kirchenführer. Die Kirchen der Pfarrei Holzkirchen (S.31)"
+        "content": "Source: Der Kirchenführer. Die Kirchen der Pfarrei Holzkirchen (S.31)"
       }
     ],
     "de": [
