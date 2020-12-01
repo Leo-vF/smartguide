@@ -66,7 +66,11 @@
       {
         "type": "img",
         "content": "assets/images/Marktplatz/pic10.jpg"
-      }
+      },
+      {
+        "type": "text",
+        "content": "Audio recorded by Florian Feicht"
+      },
     ],
     "de": [
       {
@@ -115,6 +119,10 @@
       {
         "type": "img",
         "content": "assets/images/Marktplatz/pic10.jpg"
+      },
+      {
+        "type": "text",
+        "content": "Audio eingesprochen von Florian Feicht"
       }
     ]
   }
