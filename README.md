@@ -5,7 +5,7 @@ We are a group of students of the Staatliches Gymnasium Holzkirchen and have bee
 \
 **Your Smartguide-Team,**
 
-_[Tobias Bauer](https://github.com/Tobias-Bauer), [Leonhard von Foerster](https://github.com/Quasar3C179), Fabian Kuske, Katarina Blind, Ben Rech, Caroline Reiter, Philip Dunst, Lisa Hartlep, Takemi Ando._
+_[Tobias Bauer](https://github.com/Tobias-Bauer), [Leonhard von Foerster](https://github.com/Leo-vF), Fabian Kuske, Katarina Blind, Ben Rech, Caroline Reiter, Philip Dunst, Lisa Hartlep, Takemi Ando._
 
 ## Availability
 
@@ -16,7 +16,7 @@ The Content is available as a Website as well as an App.
 You can download the App via the App- and PlayStore (not yet, we are working on getting the App on both Stores).
 At the moment there is a pre-release available on GitHub, while all content is available there might be typo's and bugs to be found.
 \
-The App was programmed with Google's framework flutter by [Leonhard von Foerster](https://github.com/Quasar3C179), you can see the Code in [this repository](https://github.com/Quasar3C179/smartguide).
+The App was programmed with Google's framework flutter by [Leonhard von Foerster](https://github.com/Leo-vF), you can see the Code in [_this repository_](https://github.com/Leo-vF/smartguide).
 
 ### Website
 
