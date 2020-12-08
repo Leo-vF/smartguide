@@ -44,7 +44,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.android.application"
+        applicationId "com.pseminar.smartguide"
         minSdkVersion 16
         compileSdkVersion 29
         targetSdkVersion 29
