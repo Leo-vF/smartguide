@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             Center(
               child: Container(
-                margin: EdgeInsets.only(top: 60.0),
+                margin: EdgeInsets.only(top: 40.0),
                 child: Text(
                   'SMARTGUIDE',
                   style: TextStyle(
@@ -64,7 +64,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             //leerer platz
             Expanded(
-              child: Container(),
+              child: Center(
+                child: Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.0),
+                    child: Image.asset('assets/images/general/start_page.jpg')),
+              ),
             ),
             //language switcher
             Container(
@@ -74,7 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
             //zum Guide
             Container(
               margin: EdgeInsets.only(
-                  left: 34.0, right: 95.0, bottom: 60.0, top: 26.0),
+                  left: 34.0, right: 95.0, bottom: 10.0, top: 26.0),
               child: FlatButton(
                 onPressed: () {
                   Navigator.of(context).push(

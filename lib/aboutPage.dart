@@ -54,6 +54,7 @@ class _AboutPageState extends State<AboutPage> {
             applicationName: "Smartguide Holzkirchen",
             applicationIcon: MyAppIcon(),
             children: [
+              Image.asset('assets/images/general/about_us.jpg'),
               Text(aboutText),
             ],
           );
