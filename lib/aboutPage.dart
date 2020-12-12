@@ -1,7 +1,9 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import 'LegalNotice.dart';
+import 'PrivacyPolicy.dart';
 
 class AboutPage extends StatefulWidget {
   @override
@@ -10,6 +12,9 @@ class AboutPage extends StatefulWidget {
 
 class _AboutPageState extends State<AboutPage> {
   String aboutText = "";
+  String privacyEnDE = "";
+  String legalEnDe = "";
+  bool language;
 
   @override
   void initState() {
@@ -20,15 +25,20 @@ class _AboutPageState extends State<AboutPage> {
   Future<void> _getData() async {
     final prefs = await SharedPreferences.getInstance();
     final de = prefs.getBool('de');
-    bool language = de;
+    bool lang = de;
+    this.language = lang;
 
     var jsonString =
         await DefaultAssetBundle.of(context).loadString("assets/about.json");
     var jsonData = json.decode(jsonString);
-    if (language == true) {
+    if (lang == true) {
       aboutText = jsonData[1];
+      privacyEnDE = "Privacy Policy";
+      legalEnDe = "Legal Notice";
     } else {
       aboutText = jsonData[0];
+      privacyEnDE = "Datenschutz";
+      legalEnDe = "Impressum";
     }
 
     setState(() {});
@@ -54,6 +64,23 @@ class _AboutPageState extends State<AboutPage> {
             applicationName: "Smartguide Holzkirchen",
             applicationIcon: MyAppIcon(),
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PrivacyPolicy(language)));
+                      },
+                      child: Text(privacyEnDE)),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LegalNotice(language)));
+                      },
+                      child: Text(legalEnDe))
+                ],
+              ),
               Image.asset('assets/images/general/about_us.jpg'),
               Text(aboutText),
             ],
