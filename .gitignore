@@ -42,3 +42,4 @@ app.*.map.json
 
 # Key exclude
 **/key.properties
+**/key.jks
