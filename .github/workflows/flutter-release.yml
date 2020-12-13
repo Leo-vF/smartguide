@@ -30,7 +30,7 @@ jobs:
         # Add build runner commands here if you have any
       - name: Format files
         run: flutter format --set-exit-if-changed .
-      - name: Build the Appbundel
+      - name: Build the Appbundle
         run: flutter build appbundle --release
       - name: Upload artifact to Github
         uses: actions/upload-artifact@v1
