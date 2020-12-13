@@ -41,7 +41,7 @@ jobs:
           name: release-bundle
           path: build/app/outputs/bundle/release/app-release.aab
       - name: Run Fastlane
-        uses: maierj/fastlane-action@v1.4.0
+        uses: fastlane/github-actions/fastlane-env-reminder@latest
         with:
           lane: Beta
           subdirectory: android
