@@ -21,6 +21,7 @@ jobs:
         id: import_gpg
         uses: crazy-max/ghaction-import-gpg@v3
         with:
+          gpg-private-key: ${{ secrets.ANDROID_KEYS_SECRET_PASSPHRASE }}
           passphrase: ${{ secrets.ANDROID_KEYS_SECRET_PASSPHRASE }}
       - name: Decrypt Android keys
         run: sh ./.github/scripts/decrypt_android_keys.sh
