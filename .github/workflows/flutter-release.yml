@@ -15,7 +15,7 @@ jobs:
       - name: Ruby install
         uses: actions/setup-ruby@v1
         with:
-          ruby-version: latest
+          ruby-version: 2.7
       - name: Setup Java
         uses: actions/setup-java@v1
         with:
