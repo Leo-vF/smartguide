@@ -40,13 +40,11 @@ jobs:
         with:
           name: release-bundle
           path: build/app/outputs/bundle/release/app-release.aab
-      - name: Release to Google Play (beta)
-          env:
-            SUPPLY_PACKAGE_NAME: ${{ secrets.ANDROID_PACKAGE_NAME }}
-            SUPPLY_JSON_KEY_DATA: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_KEY }}
-          run: bundle exec fastlane supply \
-            --aab build/app/outputs/bundle/release/app-release.aab \
-            --track beta
+      - name: Run Fastlane
+        uses: maierj/fastlane-action@v1.4.0
+        with:
+          lane: closed_beta
+          subdirectory: android
    # CD
 #  deploy_android:
 #    runs-on: ubuntu-latest
