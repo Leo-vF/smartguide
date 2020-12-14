@@ -43,7 +43,7 @@ jobs:
       - name: Run Fastlane
         uses: maierj/fastlane-action@master
         with:
-          lane: closed_beta
+          lane: Beta
           subdirectory: android
    # CD
 #  deploy_android:
