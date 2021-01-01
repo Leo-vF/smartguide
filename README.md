@@ -5,7 +5,7 @@ We are a group of students of the Staatliches Gymnasium Holzkirchen and have bee
 \
 **Your Smartguide-Team,**
 
-_[Tobias Bauer](https://github.com/Tobias-Bauer), [Leonhard von Foerster](https://github.com/Leo-vF), [Katarina Blind](https://github.com/katarinablind), Fabian Kuske, Ben Rech, Caroline Reiter, Philip Dunst, Lisa Hartlep, Takemi Ando._
+_[Tobias Bauer](https://github.com/Tobias-Bauer), [Leonhard von Foerster](https://github.com/Leo-vF), [Katarina Blind](https://github.com/katarinablind), Fabian Kuske, Ben Rech, Caroline Reiter, Philipp Dunst, Lisa Hartlep, Takemi Ando._
 
 ## Availability
 
